@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>توقعات المباريات</title>
+
+<style>
+body{
+font-family:Arial;
+background:#111;
+color:white;
+text-align:center;
+}
+
+h1{
+margin-top:30px;
+}
+
+.match{
+background:#222;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+margin:5px;
+font-size:16px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.win{background:#27ae60;color:white;}
+.draw{background:#f39c12;color:white;}
+.lose{background:#e74c3c;color:white;}
+
+#result{
+margin-top:30px;
+font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚽ موقع توقعات المباريات</h1>
+
+<div class="match">
+<h2>Real Madrid vs Barcelona</h2>
+<button class="win" onclick="predict('Real Madrid')">Real Madrid</button>
+<button class="draw" onclick="predict('Match Nul')">تعادل</button>
+<button class="lose" onclick="predict('Barcelona')">Barcelona</button>
+</div>
+
+<div class="match">
+<h2>PSG vs Bayern</h2>
+<button class="win" onclick="predict('PSG')">PSG</button>
+<button class="draw" onclick="predict('Match Nul')">تعادل</button>
+<button class="lose" onclick="predict('Bayern')">Bayern</button>
+</div>
+
+<p id="result"></p>
+
+<script>
+function predict(team){
+document.getElementById("result").innerHTML =
+"✅ التوقع ديالك هو: " + team;
+}
+</script>
+
+</body>
+</html>
+```
