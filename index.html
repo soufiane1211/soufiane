@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jeu - Guess the Number</title>
+
+<style>
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#141e30,#243b55);
+color:white;
+text-align:center;
+margin-top:100px;
+}
+
+h1{
+font-size:40px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+border-radius:5px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+border:none;
+border-radius:5px;
+background:#00c6ff;
+color:white;
+cursor:pointer;
+margin-left:10px;
+}
+
+button:hover{
+background:#0072ff;
+}
+
+#result{
+margin-top:20px;
+font-size:22px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🎮 خمن الرقم</h1>
+<p>خمن رقم بين 1 و 10</p>
+
+<input type="number" id="guess">
+<button onclick="checkGuess()">جرب</button>
+
+<p id="result"></p>
+
+<script>
+let number = Math.floor(Math.random() * 10) + 1;
+
+function checkGuess(){
+let guess = document.getElementById("guess").value;
+
+if(guess == number){
+document.getElementById("result").innerHTML = "🎉 مبروك! خمنتي الرقم";
+}
+else if(guess > number){
+document.getElementById("result").innerHTML = "⬇️ الرقم صغير أكثر";
+}
+else{
+document.getElementById("result").innerHTML = "⬆️ الرقم كبير أكثر";
+}
+}
+</script>
+
+</body>
+</html>
+```
